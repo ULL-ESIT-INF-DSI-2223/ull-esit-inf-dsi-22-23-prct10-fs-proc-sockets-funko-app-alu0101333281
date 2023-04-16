@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "test": "mocha",
-    "start": "tsc-watch --onSuccess \"node dist/main.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/ejercicio-1.js\"",
     "doc": "typedoc",
     "coverage": "c8 npm test && c8 report --reporter=lcov"
   },
