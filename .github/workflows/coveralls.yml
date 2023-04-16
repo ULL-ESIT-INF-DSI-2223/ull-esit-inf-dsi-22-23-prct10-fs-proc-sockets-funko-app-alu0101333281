@@ -3,8 +3,8 @@ name: Coveralls
 on:
   push:
     branches: [ main ]
-  pull_request: 
-    branches: [ main ] 
+  pull_request:
+    branches: [ main ]
 
 jobs:
   coveralls:
@@ -14,10 +14,10 @@ jobs:
     steps:
     - name: Cloning repo
       uses: actions/checkout@v3
-    - name: Use Node.js 19.x
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
-        node-version: 19.x
+        node-version: 16.x
     - name: Installing dependencies
       run: npm install
     - name: Generating coverage information
