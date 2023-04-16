@@ -1,6 +1,7 @@
 # Practica 10 - APIs asíncronas de gestión del sistema de ficheros, creación de procesos y creación de sockets de Node.js
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/NApXvVde)
-
+[![Tests](https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct10-fs-proc-sockets-funko-app-alu0101333281/actions/workflows/node.js.yml/badge.svg)](https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct10-fs-proc-sockets-funko-app-alu0101333281/actions/workflows/node.js.yml)
+[![Coveralls](https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct10-fs-proc-sockets-funko-app-alu0101333281/actions/workflows/coveralls.yml/badge.svg)](https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct10-fs-proc-sockets-funko-app-alu0101333281/actions/workflows/coveralls.yml)
+[![Sonar-Cloud](https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct10-fs-proc-sockets-funko-app-alu0101333281/actions/workflows/sonarcloud.yml/badge.svg)](https://github.com/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct10-fs-proc-sockets-funko-app-alu0101333281/actions/workflows/sonarcloud.yml)
 ## Introduccion 
 En este informe trataremos una serie de ejercicios orientados al uso de las APIs proporcionadas por Node.js para interactuar con el sistema de ficheros, así como para crear procesos.
 
@@ -476,7 +477,51 @@ export class FileAnalizePipe {
     }
 }
 ```
+### tests
 
+Testing "FileAnalize Class"
+    ✔ newFileAnalize is created successfully 1
+File helloworld.txt has 10 words.
+File helloworld.txt has 4 lines.
+File helloworld.txt has 69 characters.
+At least, a file analyze and a command must be specified
+    ✔ newFileAnalize is not created successfully
+    ✔ newFileAnalize is not created successfully
+File helloworld.tt does not exist.
+    ✔ newFileAnalize is an instance of Note Class
+File helloworld.txt has 69 characters.
+File helloworld.txt has 10 words.
+File helloworld.txt has 4 lines.
+
+  Testing "FileAnalizePipe Class"
+    ✔ newFileAnalizePipe is created successfully 1
+File helloworld.txt has 69 characters.
+File helloworld.txt has 10 words.
+File helloworld.txt has 4 lines.
+At least, a file analyze and a command must be specified
+    ✔ newFileAnalize is not created successfully
+    ✔ newFileAnalize is not created successfully
+File helloworld.tt does not exist.
+    ✔ newFileAnalize is an instance of Note Class
+
+File helloworld.txt has 10 words.
+File helloworld.txt has 4 lines.
+
+  8 passing (356ms)
+
+File helloworld.txt has 69 characters.
+
+### Terminal
+
+[~/P10(main)]$node --experimental-modules dist/ejercicio-2/main.js analize -f "./helloworld.txt" -alwm
+File ./helloworld.txt has 69 characters.
+File ./helloworld.txt has 10 words.
+File ./helloworld.txt has 4 lines.
+[~/P10(main)]$node --experimental-modules dist/ejercicio-2/main.js analize -f "./helloworld.txt" -al
+File ./helloworld.txt has 4 lines.
+[~/P10(main)]$node --experimental-modules dist/ejercicio-2/main.js analize -f "./helloworld.txt" -a "pipe" -wm
+File ./helloworld.txt has 69 characters.
+File ./helloworld.txt has 10 words.
 
 
 ## Conclusion
