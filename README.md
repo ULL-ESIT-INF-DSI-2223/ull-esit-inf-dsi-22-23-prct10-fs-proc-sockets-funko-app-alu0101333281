@@ -19,7 +19,7 @@ Desarrolle los siguientes ejercicios en un proyecto alojado en un nuevo reposito
     Incorpore un flujo de GitHub que ejecute sus pruebas en diferentes entornos con diferentes versiones de Node.js.
 
 ### cliente.ts
-
+ 
 ```ts
 import * as net from 'net';
 import * as readline from 'readline';
